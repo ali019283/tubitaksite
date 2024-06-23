@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  position: relative;
+  background-color: #f0f0f0;
+}
+.input-box {
+  z-index: 2;
+  position: fixed;
+  height: 76px;
+  width: 100%;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.input-box .icon-container {
+  position: relative;
+}
+.input-box i {
+  font-size: 30px;
+  color: #707070;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 150px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 8px 12px;
+}
+
+.dropdown-menu ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.input-box input {
+  flex: 1;
+  height: 100%;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  padding: 0 10px;
+  background-color: transparent;
+}
+
+.input-box .button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+}
+
+.input-box .button:active {
+  background-color: #5c97f7;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 76px);
+  margin-top: 76px;
+  border: none;
+}
+
+.info-panel {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 76px;
+  width: 30%;
+  height: calc(100vh - 76px);
+  background: #fff;
+  border-left: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  z-index: 2;
+  overflow-y: auto;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panel-image {
+  flex: 30%;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.panel-text {
+  flex: 70%;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .input-box {
+    height: 66px;
+    margin: 0 8px;
+  }
+  .input-box .icon-container {
+    margin-right: 5px;
+  }
+  .input-box i {
+    font-size: 25px;
+    margin: 0 5px;
+  }
+  .input-box input {
+    padding: 0 10px;
+  }
+  .input-box .button {
+    padding: 8px 18px;
+  }
+  .info-panel {
+    width: 100%;
+  }
+  .panel-content {
+    flex-direction: column;
+  }
+  .panel-image,
+  .panel-text {
+    width: 100%;
+  }
+}

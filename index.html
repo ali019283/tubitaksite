@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turizm sikleri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+  <div class="input-box">
+    <div class="icon-container">
+      <i class="uil uil-align-justify" onclick="toggleDropdown()"></i>
+      <div id="dropdown-menu" class="dropdown-menu">
+        <ul>
+          <li><a href="#" onclick="selectDropdownItem('Ayasofya')">Ayasofya</a></li>
+          <li><a href="#" onclick="selectDropdownItem('Sultan Ahmet')">Sultan Ahmet</a></li>
+          <li><a href="#" onclick="selectDropdownItem('Topkapı Sarayı')">Topkapı Sarayı</a></li>
+        </ul>
+      </div>
+    </div>
+    <input list="names" type="text" placeholder="Search here..." id="search-bar" />
+    <button class="button" onclick="searchplace()">Search</button>
+  </div>
+  <iframe id="map" src="https://www.google.com/maps?q=Istanbul+Turkey&output=embed" width="100%"></iframe>  
+  <div id="info-panel" class="info-panel">
+    <div id="panel-content" class="panel-content">
+      <div id="panel-image" class="panel-image"></div>
+      <div id="panel-text" class="panel-text"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
